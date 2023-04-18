@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="checkDayStatus()">Check Day Status</button>
+    <script>
+        function checkDayStatus() {
+        var currentTime = new Date(); 
+        var currentHour = currentTime.getHours(); 
+  
+  
+  var message
+  
+  if (currentHour === 0) {
+    message = "It's midnight!";
+  } else if (currentHour >= 1 && currentHour <= 11) {
+    message = "Good morning!";
+  } else if (currentHour === 12) {
+    message = "It's noon!";
+  } else if (currentHour >= 13 && currentHour <= 18) {
+    message = "Good afternoon!";
+  } else {
+    message = "Good evening!";
+  }
+  alert(message); 
+  
+ 
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <label for="input-sentence">Enter a sentence:</label>
+        <input id="input-sentence" type="text"><br>
+        <button id="submit-button" type="button">Submit</button>
+
+        <p id="result"></p>
+        
+        <script>
+            var submitButton = document.getElementById('submit-button');
+            var inputSentence = document.getElementById('input-sentence');
+            var result = document.getElementById('result');
+
+            submitButton.addEventListener('click', function () {
+                var sentence = inputSentence.value.trim();
+                if (sentence) {
+                    var words = sentence.split(' ').sort();
+                    console.log(words);
+
+                    result.textContent = 'Sorted words: ' + words.join(', ');
+
+
+                } else {
+                    alert('Please enter a sentence.');
+                }
+            });
+
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>
